@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --webpack",
-    "start": "next start --hostname 127.0.0.1",
+    "dev": "node init && next dev",
+    "build": "node init && next build --webpack",
+    "start": "node init && next start --hostname 127.0.0.1",
     "lint": "eslint",
     "test": "node --test --experimental-strip-types tests/auth.test.ts tests/validation.test.ts tests/ownership.test.ts",
     "seed": "node --experimental-strip-types prisma/seed.ts",

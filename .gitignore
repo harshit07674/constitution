@@ -1,8 +1,6 @@
 ﻿node_modules/
 .next/
 out/
-.env
-.env.*
 !.env.example
 dist/
 build/
@@ -14,4 +12,5 @@ npm-debug.log*
 .DS_Store
 
 # Local editor configuration
-.vscode/
+config.bat
+node_modules
