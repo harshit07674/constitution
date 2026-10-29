@@ -1,0 +1,17 @@
+﻿node_modules/
+.next/
+out/
+.env
+.env.*
+!.env.example
+dist/
+build/
+coverage/
+*.tsbuildinfo
+*.log
+npm-debug.log*
+.vercel/
+.DS_Store
+
+# Local editor configuration
+.vscode/

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #252A24;
+  --color-paper: #F5F1E8;
+  --color-paper-raised: #FFFCF5;
+  --color-forest: #354A3A;
+  --color-sage: #64745A;
+  --color-brass: #C5A46D;
+  --color-muted: #77776B;
+  --color-border: #DCD6C9;
+  --color-surface-secondary: #EAE5D9;
+  --color-success: #426B4D;
+  --color-danger: #A44235;
+  --color-focus: #6B8B68;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@theme {
+  --color-ink: #252A24;
+  --color-paper: #F5F1E8;
+  --color-paper-raised: #FFFCF5;
+  --color-forest: #354A3A;
+  --color-sage: #64745A;
+  --color-brass: #C5A46D;
+  --color-muted: #77776B;
+  --color-border: #DCD6C9;
+  --color-surface-secondary: #EAE5D9;
+  --color-success: #426B4D;
+  --color-danger: #A44235;
+  --color-focus: #6B8B68;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-serif, .editorial-heading {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Print CSS */
+@media print {
+  @page {
+    margin: 20mm 15mm;
+    size: A4 portrait;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  .no-print,
+  nav,
+  header,
+  aside,
+  footer,
+  button,
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .document-sheet {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  article,
+  .article-block,
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
